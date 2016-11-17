@@ -78,15 +78,13 @@ snippet mu
 ## Class
 # class
 snippet cl
-	class ${1:`vim_snippets#Filename('$1', 'name')`}
-	{
-	public:
+	class ${1:`vim_snippets#Filename('$1', 'name')`} {
+	  public:
 		$1(${2});
-		~$1();
 
-	private:
+	  private:
 		${0:/* data */}
-	};
+	}; /* class $1 */
 # member function implementation
 snippet mfun
 	${4:void} ${1:`vim_snippets#Filename('$1', 'ClassName')`}::${2:memberFunction}(${3}) {
@@ -95,7 +93,7 @@ snippet mfun
 # namespace
 snippet ns
 	namespace ${1:`vim_snippets#Filename('', 'my')`} {
-		${0}
+	${0}
 	} /* namespace $1 */
 ##
 ## Input/Output
