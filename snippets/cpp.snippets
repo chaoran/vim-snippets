@@ -7,6 +7,8 @@ snippet incc
 	#include <${1:iostream}>
 snippet binc
 	#include <boost/${1:shared_ptr}.hpp>
+snippet Incc
+	#include "${1:`vim_snippets#Filename('$1', 'name')`}.hpp"
 ##
 ## STL Collections
 # std::array
@@ -84,7 +86,7 @@ snippet cl
 
 	  private:
 		${0:/* data */}
-	}; /* class $1 */
+	};
 # member function implementation
 snippet mfun
 	${4:void} ${1:`vim_snippets#Filename('$1', 'ClassName')`}::${2:memberFunction}(${3}) {
